@@ -1,0 +1,9 @@
+-- 최신 version 확인
+npm view ~~
+
+-- 역대 version history 확인
+npm view ~~ versions
+
+
+-- 설치 (i=install, g=global)
+npm i  -g ~~@version

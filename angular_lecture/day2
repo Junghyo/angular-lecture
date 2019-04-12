@@ -1,0 +1,48 @@
+--- app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  // Pipe, Component, Directive(지시자)
+  declarations: [
+    AppComponent
+  ],
+  // Service, Module
+  imports: [
+    BrowserModule
+  ],
+  // 사용자 정의 Service
+  providers: [],
+  // html에서 사용할 컴퍼넌트 지정
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+● 컴퍼넌트들은 각각의 Tag를 갖는다.
+● main.ts는 중간다리 역활 module <----main.ts---->index.html
+● angular.json에서 경로와 파일명을 바꿀 경우 해당 경로에 해당 파일이 반드시 있어야함.
+  (ex : index.html -> start.html)
+● main.ts와 app.module.ts의 AppModule명을 변경 가능
+
+
+-- app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  // tag명
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'template738';
+}
+
+
+● 배포 build : ng build --prod
+● node_modules만 잘라내기 해서 복사
+● service는 providers에 기술. 특정 component에 하면 특정 component 내에서만 사용 가능.
+  app.module.ts에 할 경우 모든 컴퍼넌트에서 사용 가능

@@ -1,0 +1,7 @@
+● Pipe : view에 뿌려질 value값을 수정(변형)하여 뿌려지도록 함
+● Directive: DOM 조작
+
+
+● service : class (export) 
+            ===> controller에서 new (생성자)를 해서 사용해도 되지만 
+                 java처럼 의존성을 주입하여 사용 가능

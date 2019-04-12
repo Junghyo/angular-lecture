@@ -1,0 +1,19 @@
+VSCode 영문 -> 한글
+	Korean Language Pack for Visual Studio Code => VSCode 2.3 이상에서 설치
+
+
+Angular
+	Angular 7 Snippets - TypeScript, Html, ngRx, Angular Flex Layout, Material & Testing
+	Angular v7 Snippets
+	angular2-inline
+
+JavaScript 
+	JavaScript(ES6) code snippets
+
+
+Server
+	Live Server
+
+
+icon & theme
+	Material Icon Theme

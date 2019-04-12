@@ -1,0 +1,132 @@
+NodeJS 설치
+	https://nodejs.org/ko/
+
+1. 8.11.3 버전 다운로드 및 설치.
+	기본 세팅 그대로 설치합니다.
+
+2. 설치 확인
+	Command 창을 열어서 다음과 같이 확인합니다
+
+	> node -v
+	=> v8.11.xx
+
+	> npm -v
+	=> 5.6.xx
+
+
+VSCode 설치
+	https://code.visualstudio.com/
+	위의 페이지에서 OS 버전에 맞는 VSCode를 받아 설치합니다.
+
+
+VS 세팅
+	파일 - 기본설정 - 설정
+		폰트 크기 등 설정
+
+
+	확장 프로그램 설치
+		javascript - JavaScript (ES6) code snippets
+		server - Live Server
+
+
+
+TypeScript 설치
+
+Command 창에서 다음과 같이 설치합니다
+	$ npm install -g typescript
+
+버전확인 - 도스창에서 확인
+	tsc -v
+
+
+TypeScript Build 설정.
+	작업 폴더를 ROOT 폴더로 지정되어 있어야 한다.
+
+
+TypeScript 컴파일
+	tsc 파일명
+	tsc 파일명 --outDir 경로명
+	tsc 파일명 --target es5(2015, 2016)
+
+설정파일 만들기
+	tsc -init
+
+	"sourceMap": true,
+	"outDir": "./dist",
+
+설정파일대로 컴파일
+	tsc
+
+
+감시파일 작성
+	보기 - 명령 팔레트 (ctrl + shift + p)
+	Tasks: 기본 빌드 작업 구성 (Configure Default Build Task) 선택
+	tsc: 감시(watch) 선택
+실행
+	터미널 - 빌드 작업 실행 (ctrl + shift + b)
+	tsc: 감시(watch) 선택
+
+
+package.json 파일 만들기
+	npm init -y
+
+모듈 설치
+    	npm i 모듈명
+
+	package.json 파일에 
+    	"dependencies": {
+        		"http-live-server": "^1.2.0",
+        		"jquery": "^3.3.1"
+    	}
+    	식으로 등록되고 현재 프로젝트에 node_modules라는 폴더에 설치됨
+
+
+다시 설치하려면 package.json 파일이 있는 위치에서
+    npm install
+
+
+
+AngularCLI 설치
+1. Command 창을 열어서 다음과 같이 설치합니다
+	$ npm install -g @angular/cli
+	$ npm install -g @angular/cli@1.7.4
+
+2. 버전 확인
+Command 창에서 다음과 같이 확인합니다
+	$ ng --version
+
+
+3. 작업환경 구성
+1). 예제 파일을 테스트 할 root 폴더를 생성합니다
+	ex] $ mkdir AngularWorks
+
+2). 실습 할 프로젝트를 설치합니다
+	$ ng new 프로젝트명
+
+
+
+4. 프로젝트 시작
+    ng serve                => 4200번 포트
+    ng serve --port 3000    => 3000번 포트
+
+    프로젝트는 @angular/cli가 설치되어 있어야 정상 동작 함.
+
+
+5. 프로젝트 종료
+    ctrl + c
+
+
+6. angular5와 angular6의 rxjs의 호환성 문제
+	package.json 폴더에서 실행
+    		npm i rxjs-compat
+		
+		삭제
+    		npm uninstall rxjs-compat
+
+
+7. 빌드 
+	개발용 빌드
+    		ng build
+
+	배포용 빌드
+    		ng build --prod
